@@ -1,7 +1,9 @@
 import React from 'react';
-import './style.scss';
-import logo from '../../assets/logo.png';
 import { Link } from 'react-router-dom';
+
+import logo from '../../assets/logo.png';
+import './style.scss';
+
 
 
 const Header = () => (
@@ -16,6 +18,9 @@ const Header = () => (
                     <ul>
                         <li>
                             <Link to="/registration">Register</Link>
+                        </li>
+                        <li>
+                            <Link to="/login">Login</Link>
                         </li>
                     </ul>
                 </div>
