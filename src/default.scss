@@ -3,12 +3,11 @@ html {
 }
 
 html, body {
-    height: 100%;
     margin: 0;
     padding: 0;
 }
 
-html, body, #root, .App {
+html, body, #root, .App, .fullHight {
     height: 100%;
 }
 *, ::before, ::after {
@@ -27,8 +26,8 @@ a {
     cursor: pointer;
 }
 a, a:hover {
-    --webkit-transition: all .4s ease-in-out;
-    --moz-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    -moz-transition: all .4s ease-in-out;
     transition: all .4s ease-in-out;
 }
 .main {
