@@ -1,22 +1,15 @@
-.signin {
+.btn {
     display: block;
     width: 100%;
-    max-width: 40.00rem;
-    margin: 4rem auto 6rem;
-    border: 1px black solid;
-    .wrap {
-       padding: 10px;
-       
-       h2 {
-           font-size: 2.2rem;
-           line-height: 1;
-           font-weight: 400;
-           text-transform: uppercase;
-           text-align: center;
-           display: block;
-           width: 100%;
-           padding: 0;
-           margin: 0 auto;
-       }
-    }
-}
+    font-size: 1.8rem;
+    line-height: 1;
+    font-weight: 300;
+    text-transform: uppercase;
+    color: white;
+    background: black;
+    padding: 1rem 10px;
+    margin: 0 auto;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+  }

@@ -1,4 +1,13 @@
 import firebase from 'firebase/app';
-import 'fitease/firestore';
-import 'fitease/auth';
-import firebaseConfig from './firebase';
+import 'firebase/firestore';
+import 'firebase/auth';
+import {firebaseConfig} from './firebase';
+
+firebase.initializeApp(firebaseConfig);
+
+export const auth = firebase.auth();
+export const firestore = firebase.firestore();
+
+const GoogleProvider = new firebase.auth.GoogleAuthProvider();
+GoogleProvider.setCustomParameters({prompt:'select_account'});
+export const sigInWithGoogle = () => auth.signInWithPopup(GoogleProvider);

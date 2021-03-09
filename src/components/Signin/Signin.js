@@ -1,26 +1,35 @@
-import React from 'react';
+import React,{ Component} from 'react';
 import {Button} from '../../components';
 
 import './style.scss';
+import {sigInWithGoogle} from '../../config/utilities';
 
 
-const Signin = () => (
-    <div className="signin">
-        <div className="wrap">
-            <h2>Login</h2>
-            <div className="formWrap">
-                <form className="">
-                    <div className="socialSignin">
-                        <div className="row">
-                            <Button>
-                                Sign in with Google 
-                            </Button>
-                        </div>
+class Signin extends Component {
+
+    handleSubmit = async e => {
+        e.preventDefault();
+    }
+    render() {
+        return (
+            <div className="signin">
+                <div className="wrap">
+                    <h2>Login</h2>
+                    <div className="formWrap">
+                        <form onSubmit={this.handleSubmit}>
+                            <div className="socialSignin">
+                                <div className="row">
+                                    <Button onClick={sigInWithGoogle}>
+                                        Sign in with Google 
+                                    </Button>
+                                </div>
+                            </div>
+                        </form>
                     </div>
-                </form>
+                </div>
             </div>
-        </div>
-    </div>
-);
+        );
+    }
+};
 
 export default Signin;
